@@ -1,0 +1,21 @@
+service bound
+master bound
+
+select record by rid(gridView)
+
+set serviceValue by record.sid
+set masterValue by record.mid
+set serviceMinute by record.serviceMinute
+
+calc Price
+calc masterCommission
+calc profit
+calc cash
+calc debt
+calc companyRevenue
+
+if(accept consume)
+	update customer(consume method (restMoney,debt))
+	update record//comment
+if(cancel consume)
+	update record//
