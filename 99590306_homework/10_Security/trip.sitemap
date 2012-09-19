@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="" roles="*">
+      <siteMapNode url="~/10_Security/homePage.aspx" title="網站首頁"  description="" />
+      <siteMapNode url="~/10_Security/office/customer/customerSelect.aspx" title="客戶獨立功能"  description="" />
+      <siteMapNode url="~/10_Security/office/serviceComplete.aspx" title="給予師父評價"  description="" />
+      <siteMapNode url="~/10_Security/office/reservationTable.aspx" title="預約表格"  description="" />
+      <siteMapNode url="~/10_Security/cellphonelist.aspx" title="簡訊發送列表"  description="" />
+      <siteMapNode url="~/10_Security/office/reporter/monthlyReporter.aspx" title="月報表"  description="" />
+      <siteMapNode url="~/10_Security/office/reporter/dailyReporter.aspx" title="日報表"  description="" />
+      <siteMapNode url="~/10_Security/office/hotServices.aspx" title="熱門商品排行榜"  description="" />
+      <siteMapNode url="~/10_Security/office/hotCustomerMaster.aspx" title="客戶與師父分析"  description="" />
+      <siteMapNode url="~/10_Security/office/customer.aspx" title="所有客戶管理"  description="" />
+      <siteMapNode url="~/10_Security/office/service.aspx" title="所有服務管理"  description="" />
+      <siteMapNode url="~/10_Security/office/master.aspx" title="所有師父管理"  description="" />
+      <siteMapNode url="~/10_Security/office/record.aspx" title="所有消費紀錄"  description="" />
+    </siteMapNode>
+</siteMap>

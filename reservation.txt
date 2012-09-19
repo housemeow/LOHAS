@@ -1,0 +1,13 @@
+SELECT rid, sid, cid, mid, serviceDate, serviceMinute, servicePrice, masterCommission, profit, debt, cash, companyRevenue, opinion, recorder, executionState FROM Record WHERE (executionState = @reservation) AND (DATEPART(yyyy, serviceDate) = @Year) AND (DATEPART(mm, serviceDate) = @Month) AND (DATEPART(dd, serviceDate) = @Day)
+
+
+SELECT rid, sid, cid, mid, serviceDate, serviceMinute, servicePrice, masterCommission, profit, debt, cash, companyRevenue, opinion, recorder, executionState FROM Record WHERE (executionState = '¹w¬ù¤¤') AND (cast(serviceDate as date) = cast(@today as date))
+
+Convert(date,DateSent) = Convert(date,@Date)
+
+
+WHERE convert (datetime, convert (varchar, datecol, 101), 101) = @yourdate
+
+GETDATE()
+GetDate()
+2012/7/18 

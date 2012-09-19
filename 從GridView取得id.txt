@@ -1,0 +1,1 @@
+先將GridView的DataKeyNames設成Table中Prime Key，就可以利用GridView當中debtGridView.SelectedDataKey.Value抓到id的值
