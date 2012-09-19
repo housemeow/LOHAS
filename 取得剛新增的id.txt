@@ -1,0 +1,6 @@
+1.在insert query中打上;SELECT @PK_New = SCOPE_IDENTITY()
+※SCOPE_IDENTITY()為T-SQL的指令碼
+2.修改PK_New的Direction為Output
+3.在Inserted事件加入以下程式碼
+int rid = Convert.ToInt32(e.Command.Parameters["@PK_New"].Value);
+Response.Write("<script> alert('您的rid為" + rid.ToString() + "請記住您的rid以方便櫃台查詢!'); </script>");
