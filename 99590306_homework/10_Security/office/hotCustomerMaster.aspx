@@ -89,7 +89,8 @@
                                 <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSourcehotCustomer" 
                                     style="text-align: center">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="消費總額">
+                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="消費總額" 
+                                            ToolTip="#VALX\n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
@@ -107,7 +108,8 @@
                             <td>
                                 <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSourcehotDebt">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="欠款">
+                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="欠款" 
+                                            ToolTip="#VALX\n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
@@ -178,7 +180,8 @@
                                 <asp:Chart ID="Chart3" runat="server" 
                                     DataSourceID="SqlDataSourcehotMasterprice">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="總抽成">
+                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="總抽成" 
+                                            ToolTip="#VALX\n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
@@ -197,7 +200,8 @@
                                 <asp:Chart ID="Chart4" runat="server" 
                                     DataSourceID="SqlDataSourcehotMasterCount">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="服務次數">
+                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="服務次數" 
+                                            ToolTip="#VALX \n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
@@ -268,7 +272,8 @@
                                 <asp:Chart ID="Chart5" runat="server" 
                                     DataSourceID="SqlDataSourceMasterTime">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="總時數">
+                                        <asp:Series Name="Series1" XValueMember="師父" YValueMembers="總時數" 
+                                            ToolTip="#VALX\n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
@@ -287,7 +292,8 @@
                                 <asp:Chart ID="Chart6" runat="server" 
                                     DataSourceID="SqlDataSourceCutermerTime">
                                     <Series>
-                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="總服務時數">
+                                        <asp:Series Name="Series1" XValueMember="客戶" YValueMembers="總服務時數" 
+                                            ToolTip="#VALX\n#VAL">
                                         </asp:Series>
                                     </Series>
                                     <ChartAreas>
