@@ -50,14 +50,15 @@
         <asp:Chart ID="Chart4" runat="server" DataSourceID="serviceSqlDataSource">
             <Series>
                 <asp:Series ChartArea="ChartArea1" Name="Series1" XValueMember="服務名稱" 
-                    YValueMembers="總金額" IsValueShownAsLabel="True" IsXValueIndexed="True">
+                    YValueMembers="總金額" IsValueShownAsLabel="True" IsXValueIndexed="True" 
+                    ToolTip="#VALX\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>
                 <asp:ChartArea Name="ChartArea1">
                     <AxisY Title="總金額收入">
                     </AxisY>
-                    <AxisX Title="服務名稱">
+                    <AxisX Title="服務名稱" Enabled="False">
                     </AxisX>
                 </asp:ChartArea>
             </ChartAreas>
@@ -71,7 +72,8 @@
         <asp:Chart ID="Chart2" runat="server" DataSourceID="serviceSqlDataSource">
             <Series>
                 <asp:Series ChartType="Pie" IsValueShownAsLabel="True" Legend="Legend1" 
-                    Name="Series1" XValueMember="服務名稱" YValueMembers="消費次數">
+                    Name="Series1" XValueMember="服務名稱" YValueMembers="消費次數" 
+                    ToolTip="#VALX\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>

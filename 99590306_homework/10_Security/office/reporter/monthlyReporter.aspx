@@ -233,25 +233,32 @@
             DataSourceID="SqlDataSourceAllMonthOfTheYear" Width="800px">
             <Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="公司總營收" 
-                    XValueMember="月份" YValueMembers="公司收益" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="公司收益" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="現金總收入" 
-                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="欠款" 
-                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="淨利" 
-                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="師傅總抽成" 
-                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series Legend="Legend1" Name="服務總價" XValueMember="月份" 
-                    YValueMembers="總價" IsValueShownAsLabel="True">
+                    YValueMembers="總價" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="總服務時數" XValueMember="月份" 
-                    YValueMembers="分鐘" IsValueShownAsLabel="True">
+                    YValueMembers="分鐘" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>
@@ -287,25 +294,32 @@
             <Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="公司總營收" 
                     XValueMember="月份" YValueMembers="公司收益" IsValueShownAsLabel="True" 
-                    Font="Microsoft Sans Serif, 8pt" MarkerBorderWidth="10">
+                    Font="Microsoft Sans Serif, 8pt" MarkerBorderWidth="10" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="現金總收入" 
-                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="欠款" 
-                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="淨利" 
-                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="師傅總抽成" 
-                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series Legend="Legend1" Name="服務總價" XValueMember="月份" 
-                    YValueMembers="總價" IsValueShownAsLabel="True">
+                    YValueMembers="總價" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="總服務時數" XValueMember="月份" 
-                    YValueMembers="時數" IsValueShownAsLabel="True">
+                    YValueMembers="時數" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>
@@ -338,25 +352,32 @@
             DataSourceID="secondMonthSqlDataSource" Width="400px">
             <Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="公司總營收" 
-                    XValueMember="月份" YValueMembers="公司收益" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="公司收益" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="現金總收入" 
-                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="現金" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="欠款" 
-                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="欠款" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="淨利" 
-                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="淨利" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="師傅總抽成" 
-                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True">
+                    XValueMember="月份" YValueMembers="師傅抽成" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series Legend="Legend1" Name="服務總價" XValueMember="月份" 
-                    YValueMembers="總價" IsValueShownAsLabel="True">
+                    YValueMembers="總價" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="總服務時數" XValueMember="月份" 
-                    YValueMembers="時數" IsValueShownAsLabel="True">
+                    YValueMembers="時數" IsValueShownAsLabel="True" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>
