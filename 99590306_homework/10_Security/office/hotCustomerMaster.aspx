@@ -95,6 +95,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>
@@ -114,6 +116,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>
@@ -186,6 +190,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>
@@ -206,6 +212,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>
@@ -278,6 +286,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>
@@ -298,6 +308,8 @@
                                     </Series>
                                     <ChartAreas>
                                         <asp:ChartArea Name="ChartArea1">
+                                            <AxisX Enabled="False">
+                                            </AxisX>
                                         </asp:ChartArea>
                                     </ChartAreas>
                                 </asp:Chart>

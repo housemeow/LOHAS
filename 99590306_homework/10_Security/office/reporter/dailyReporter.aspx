@@ -239,24 +239,25 @@
             DataSourceID="SqlDataSourceAllDayOfTheMonth" Width="800px">
             <Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="公司總營收" 
-                    XValueMember="日" YValueMembers="公司收益">
+                    XValueMember="日" YValueMembers="公司收益" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="現金總收入" XValueMember="日" 
-                    YValueMembers="現金">
+                    YValueMembers="現金" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="欠款" XValueMember="日" 
-                    YValueMembers="欠款">
+                    YValueMembers="欠款" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
-                <asp:Series Legend="Legend1" Name="總時數" XValueMember="日" YValueMembers="分鐘">
+                <asp:Series Legend="Legend1" Name="總時數" XValueMember="日" YValueMembers="分鐘" 
+                    ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="淨利" XValueMember="日" 
-                    YValueMembers="淨利">
+                    YValueMembers="淨利" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="師傅總抽成" 
-                    XValueMember="日" YValueMembers="師傅抽成">
+                    XValueMember="日" YValueMembers="師傅抽成" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
                 <asp:Series ChartArea="ChartArea1" Legend="Legend1" Name="服務總價" XValueMember="日" 
-                    YValueMembers="總價">
+                    YValueMembers="總價" ToolTip="#VALX #SERIESNAME\n#VAL">
                 </asp:Series>
             </Series>
             <ChartAreas>
