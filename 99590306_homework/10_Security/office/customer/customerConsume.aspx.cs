@@ -56,14 +56,14 @@ public partial class _11_Project_customer_customerConsume : System.Web.UI.Page
         calcDebt();
         calcCash();
     }
-    protected void unitRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
-    {//修改價格單位時間
-        calcPrice();
-        calcCompanyRevenue();
-        calcProfit();
-        calcDebt();
-        calcCash();
-    }
+    //protected void unitRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
+    //{//修改價格單位時間
+    //    calcPrice();
+    //    calcCompanyRevenue();
+    //    calcProfit();
+    //    calcDebt();
+    //    calcCash();
+    //}
     protected void servicePriceTextBox_TextChanged(object sender, EventArgs e)
     {//因為servicePrice是手動修改所以不需重算Price
         calcCompanyRevenue();
@@ -78,7 +78,7 @@ public partial class _11_Project_customer_customerConsume : System.Web.UI.Page
         string firstTop = customerDetailsView.Rows[10].Cells[1].Text;
         DataView dataView = (DataView)customerSqlDataSource.Select(new DataSourceSelectArguments());
         firstTop = dataView.Table.Rows[0]["firstTopUp"].ToString();
-        int unit = Convert.ToInt32(unitRadioButtonList.SelectedValue);
+        //int unit = Convert.ToInt32(unitRadioButtonList.SelectedValue);
         int price;
         if (firstTop == "")
         {
@@ -92,7 +92,7 @@ public partial class _11_Project_customer_customerConsume : System.Web.UI.Page
             price = Convert.ToInt16(vipCostLabel.Text);
             isVipLabel.Text = "本客戶為已儲值客戶，收費為:" + vipCostLabel.Text; ;
         }
-        servicePriceTextBox.Text = (unit * price).ToString();
+        servicePriceTextBox.Text =  price.ToString();
     }
     private void calcProfit()
     { //計算淨利 淨利=公司營收-師父抽成

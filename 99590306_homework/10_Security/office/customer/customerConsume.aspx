@@ -218,23 +218,6 @@
         <table align="center">
             <tr>
                 <td class="style1">
-                    價格單位時間：</td>
-                <td>
-                    <asp:RadioButtonList ID="unitRadioButtonList" runat="server" 
-                        AutoPostBack="True" 
-                        onselectedindexchanged="unitRadioButtonList_SelectedIndexChanged" 
-                        RepeatColumns="3" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                        <asp:ListItem Selected="True">1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem>6</asp:ListItem>
-                    </asp:RadioButtonList>
-                </td>
-            </tr>
-            <tr>
-                <td class="style1">
                     收費價格 ： <br />
                 </td>
                 <td>
