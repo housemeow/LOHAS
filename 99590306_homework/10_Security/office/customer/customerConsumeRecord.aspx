@@ -144,7 +144,9 @@
             AutoGenerateRows="False" CellPadding="4" DataKeyNames="rid" 
             DataSourceID="updateRecordSqlDataSource" DefaultMode="Edit" ForeColor="#333333" 
             GridLines="None" Height="50px" HorizontalAlign="Center" 
-            onitemupdated="consumeRecordDetailsView_ItemUpdated">
+            onitemupdated="consumeRecordDetailsView_ItemUpdated" 
+            ondatabinding="consumeRecordDetailsView_DataBinding" 
+            ondatabound="consumeRecordDetailsView_DataBound">
             <AlternatingRowStyle BackColor="White" />
             <CommandRowStyle BackColor="#FFFFC0" Font-Bold="True" />
             <FieldHeaderStyle BackColor="#FFFF99" Font-Bold="True" />
