@@ -118,7 +118,7 @@ public partial class _11_Project_customer_customerSelect : System.Web.UI.Page
         if (commentCheckBox.Checked) {//備註篩選條件
             if (parameter != null)
             {
-                parameter += " AND comment LIKE N'%" + commentTextBox.Text + "%'";
+                parameter += " AND comment LIKE N'%" + commentTextBox.Text + "%'";                                      
             }
             else
             {

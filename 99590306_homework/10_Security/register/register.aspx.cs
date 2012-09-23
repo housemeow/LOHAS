@@ -14,5 +14,7 @@ public partial class _10_Security_Security_register : System.Web.UI.Page
     }
     protected void CreateUserWizard_CreatedUser(object sender, EventArgs e)
     {
+        //CreateUserWizard.UserName
+        Roles.AddUserToRole(CreateUserWizard.UserName, "counter");
     }
 }
