@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.Page
 {
+    DetailsViewMode mode;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack) {
@@ -17,15 +18,14 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
             endDateCalendar.VisibleDate = now;
             startDateLabel.Text = now.ToShortDateString();
             endDateLabel.Text = now.ToShortDateString();
-
-            //consumeRecordDetailsView_Enable();
+            consumeRecordDetailsView_Enable();
         }
+        
     }
     protected void consumeRecordGridView_SelectedIndexChanged(object sender, EventArgs e)
     {
         consumeRecordDetailsView.PageIndex = consumeRecordGridView.SelectedIndex;
-        
-
+        consumeRecordDetailsView_Enable();
     }
     protected void consumeRecordGridView_DataBound(object sender, EventArgs e)
     {
@@ -121,23 +121,61 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
     }
     private void consumeRecordDetailsView_Enable() 
     {
-        //if (User.IsInRole("boss"))
-        //{
-        //    consumeRecordDetailsView.DefaultMode = DetailsViewMode.Edit;
-        //}
-        //else
-        //{
-            consumeRecordDetailsView.DefaultMode = DetailsViewMode.ReadOnly;
-            
-        //}
-    }
+        if (User.IsInRole("boss"))
+        {
+            consumeRecordDetailsView.ChangeMode(DetailsViewMode.Edit);
+            //Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+            //button.Enabled = true;
+            //mode = DetailsViewMode.Edit;
+            //consumeRecordDetailsView.DefaultMode = DetailsViewMode.Edit;
+        }
+        else
+        {
 
-    protected void consumeRecordDetailsView_DataBinding(object sender, EventArgs e)
+            Label11.Text = consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text;
+            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢")
+            {
+                consumeRecordDetailsView.ChangeMode(DetailsViewMode.ReadOnly);
+                //Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+                //button.Enabled = false;
+            }
+            else 
+            {
+                
+                consumeRecordDetailsView.ChangeMode(DetailsViewMode.Edit);
+                //Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+                //button.Enabled = true;
+            }
+        }
+    }
+    protected void consumeRecordDetailsView_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+    {
+        
+    }
+    protected void consumeRecordDetailsView_Load(object sender, EventArgs e)
     {
         
     }
     protected void consumeRecordDetailsView_DataBound(object sender, EventArgs e)
     {
-        
+        if (User.IsInRole("boss"))
+        {
+            Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+            button.Enabled = true;
+        }
+        else
+        {
+            Label11.Text = consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text;
+            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢")
+            {
+                Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+                button.Enabled = false;
+            }
+            else
+            {
+                Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
+                button.Enabled = true;
+            }
+        }
     }
 }

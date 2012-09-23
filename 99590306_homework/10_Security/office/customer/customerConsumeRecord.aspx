@@ -80,6 +80,7 @@
         </table>
         <br />
         <asp:Label ID="nullLabel" runat="server"></asp:Label>
+        <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
         <br />
         <asp:GridView ID="consumeRecordGridView" runat="server" 
             AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" 
@@ -142,10 +143,11 @@
         <br />
         <asp:DetailsView ID="consumeRecordDetailsView" runat="server" 
             AutoGenerateRows="False" CellPadding="4" DataKeyNames="rid" 
-            DataSourceID="updateRecordSqlDataSource" DefaultMode="Edit" ForeColor="#333333" 
+            DataSourceID="updateRecordSqlDataSource" ForeColor="#333333" 
             GridLines="None" Height="50px" HorizontalAlign="Center" 
             onitemupdated="consumeRecordDetailsView_ItemUpdated" 
-            ondatabinding="consumeRecordDetailsView_DataBinding" 
+            onload="consumeRecordDetailsView_Load" 
+            onpageindexchanging="consumeRecordDetailsView_PageIndexChanging" 
             ondatabound="consumeRecordDetailsView_DataBound">
             <AlternatingRowStyle BackColor="White" />
             <CommandRowStyle BackColor="#FFFFC0" Font-Bold="True" />
