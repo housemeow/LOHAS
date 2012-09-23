@@ -133,7 +133,9 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
         {
 
             Label11.Text = consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text;
-            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢")
+            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢" ||
+                consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "加值" ||
+                consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "還款")
             {
                 consumeRecordDetailsView.ChangeMode(DetailsViewMode.ReadOnly);
                 //Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
@@ -166,7 +168,9 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
         else
         {
             Label11.Text = consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text;
-            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢")
+            if (consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "服務完畢" ||
+                consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "加值" ||
+                consumeRecordGridView.Rows[consumeRecordGridView.SelectedIndex].Cells[13].Text == "還款")
             {
                 Button button = (Button)consumeRecordDetailsView.FindControl("okButton");
                 button.Enabled = false;
