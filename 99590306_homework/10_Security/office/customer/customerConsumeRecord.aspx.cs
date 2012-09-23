@@ -17,11 +17,15 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
             endDateCalendar.VisibleDate = now;
             startDateLabel.Text = now.ToShortDateString();
             endDateLabel.Text = now.ToShortDateString();
+
+            //consumeRecordDetailsView_Enable();
         }
     }
     protected void consumeRecordGridView_SelectedIndexChanged(object sender, EventArgs e)
     {
         consumeRecordDetailsView.PageIndex = consumeRecordGridView.SelectedIndex;
+        
+
     }
     protected void consumeRecordGridView_DataBound(object sender, EventArgs e)
     {
@@ -41,6 +45,8 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
         int index = consumeRecordGridView.SelectedIndex;
         consumeRecordGridView.DataBind();
         consumeRecordGridView.SelectedIndex = index;
+        
+
     }
     protected void okButton_Click(object sender, EventArgs e)
     {
@@ -111,5 +117,27 @@ public partial class _11_Project_customer_customerConsumeRecord : System.Web.UI.
         endDateLabel.Text = end.ToShortDateString();
 
         consumeRecordGridView.DataBind();
+        
+    }
+    private void consumeRecordDetailsView_Enable() 
+    {
+        //if (User.IsInRole("boss"))
+        //{
+        //    consumeRecordDetailsView.DefaultMode = DetailsViewMode.Edit;
+        //}
+        //else
+        //{
+            consumeRecordDetailsView.DefaultMode = DetailsViewMode.ReadOnly;
+            
+        //}
+    }
+
+    protected void consumeRecordDetailsView_DataBinding(object sender, EventArgs e)
+    {
+        
+    }
+    protected void consumeRecordDetailsView_DataBound(object sender, EventArgs e)
+    {
+        
     }
 }
