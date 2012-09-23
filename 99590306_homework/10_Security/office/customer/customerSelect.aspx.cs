@@ -64,22 +64,22 @@ public partial class _11_Project_customer_customerSelect : System.Web.UI.Page
         {
             if (parameter != null)
             {
-                parameter += " AND name LIKE '%' + '" + nameTextBox.Text + "' + '%'";
+                parameter += " AND name LIKE N'%" + nameTextBox.Text + "%'";
             }
             else
             {
-                parameter = "name LIKE '%' + '" + nameTextBox.Text + "' + '%'";
+                parameter = "name LIKE N'%" + nameTextBox.Text + "%'";
             }
         }
         if (genderCheckBox.Checked)//性別篩選條件
         {
             if (parameter != null)
             {
-                parameter += " AND gender LIKE '%' + '" + genderRadioButtonList.SelectedValue + "' + '%'";
+                parameter += " AND gender LIKE '%" + genderRadioButtonList.SelectedValue + "%'";
             }
             else
             {
-                parameter = "gender LIKE '%' + '" + genderRadioButtonList.SelectedValue + "' + '%'";
+                parameter = "gender LIKE '%" + genderRadioButtonList.SelectedValue + "%'";
             }
         }
         if (birthdayCheckBox.Checked) { //生日篩選條件
@@ -97,32 +97,32 @@ public partial class _11_Project_customer_customerSelect : System.Web.UI.Page
         {
             if (parameter != null)
             {
-                parameter += " AND phone LIKE '%' + '" + phoneTextBox.Text + "' + '%'";
+                parameter += " AND phone LIKE '%" + phoneTextBox.Text + "%'";
             }
             else
             {
-                parameter = "phone LIKE '%' + '" + phoneTextBox.Text + "' + '%'";
+                parameter = "phone LIKE '%" + phoneTextBox.Text + "'%'";
             }
         }
         if (cellphoneCheckBox.Checked)//手機篩選條件
         {
             if (parameter != null)
             {
-                parameter += " AND cellphone LIKE '%' + '" + cellphoneTextBox.Text + "' + '%'";
+                parameter += " AND cellphone LIKE '%" + cellphoneTextBox.Text + "%'";
             }
             else
             {
-                parameter = "cellphone LIKE '%' + '" + cellphoneTextBox.Text + "' + '%'";
+                parameter = "cellphone LIKE '%" + cellphoneTextBox.Text + "%'";
             }
         }
         if (commentCheckBox.Checked) {//備註篩選條件
             if (parameter != null)
             {
-                parameter += " AND comment LIKE '%' + '" + commentTextBox.Text + "' + '%'";
+                parameter += " AND comment LIKE N'%" + commentTextBox.Text + "%'";
             }
             else
             {
-                parameter += "comment LIKE '%' + '" + commentTextBox.Text + "' + '%'";
+                parameter += "comment LIKE N'%" + commentTextBox.Text + "%'";
             }
         }
         if (parameter != null)//加入篩選條件
