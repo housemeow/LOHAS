@@ -10,6 +10,20 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:LoginView ID="LoginView" runat="server">
+            <AnonymousTemplate>
+                <asp:Login ID="Login1" runat="server" onloggedin="Login1_LoggedIn1">
+                </asp:Login>
+            </AnonymousTemplate>
+            <LoggedInTemplate>
+                　　櫃台:<asp:LoginName ID="LoginName1" runat="server" />
+                    <br/>
+                    <br />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" 
+                    onloggingout="LoginStatus1_LoggingOut" />
+            </LoggedInTemplate>
+        </asp:LoginView>
+    
         <br />
         <br />
     
