@@ -20,7 +20,8 @@
         <br />
         <asp:CreateUserWizard ID="CreateUserWizard" runat="server" 
             oncreateduser="CreateUserWizard_CreatedUser" 
-            ContinueDestinationPageUrl="~/10_Security/homePage.aspx">
+            ContinueDestinationPageUrl="~/10_Security/homePage.aspx" 
+            style="margin-right: 0px">
             <WizardSteps>
                 <asp:CreateUserWizardStep runat="server" />
                 <asp:CompleteWizardStep runat="server">
