@@ -5,14 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>簡訊發送列表</title>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server" method="get">
     <div>  
         <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True">
-            <asp:ListItem Selected="True" Value="1">全部會員</asp:ListItem>
-            <asp:ListItem Value="2">VIP會員</asp:ListItem>
-            <asp:ListItem Value="3">非VIP會員</asp:ListItem>
+            <asp:ListItem Selected="True" Value="全部會員">全部會員</asp:ListItem>
+            <asp:ListItem Value="VIP會員">VIP會員</asp:ListItem>
+            <asp:ListItem Value="非VIP會員">非VIP會員</asp:ListItem>
+            <asp:ListItem Value="當月壽星">當月壽星</asp:ListItem>
+            <asp:ListItem>下月壽星</asp:ListItem>
         </asp:RadioButtonList>
         <br />
         <asp:TextBox ID="cellphoneTextBox" runat="server" AutoPostBack="True" 
@@ -20,7 +22,8 @@
         <asp:SqlDataSource ID="SqlDataSourcePhone" runat="server" 
             ConnectionString="<%$ ConnectionStrings:mikeConnectionString %>" 
             
-            SelectCommand="SELECT cellphone FROM Customer WHERE (cellphone IS NOT NULL) AND ( @select = 2) AND (firstTopUp IS NOT NULL) OR (cellphone IS NOT NULL) AND ( @select = 3) AND (firstTopUp IS NULL) OR (cellphone IS NOT NULL) AND ( @select = 1)">
+            
+            SelectCommand="SELECT cellphone, birthday FROM Customer WHERE (cellphone IS NOT NULL) AND ( @select = 'VIP會員') AND (firstTopUp IS NOT NULL) OR (cellphone IS NOT NULL) AND ( @select = '非VIP會員') AND (firstTopUp IS NULL) OR (cellphone IS NOT NULL) AND ( @select = '全部會員') OR (cellphone IS NOT NULL) AND ( @select = '當月壽星') AND (MONTH(GETDATE()) = MONTH(birthday)) OR (cellphone IS NOT NULL) AND ( @select = '下月會員') AND (DATEADD(month, 1, GETDATE()) = MONTH(birthday))">
             <SelectParameters>
                 <asp:ControlParameter ControlID="RadioButtonList1" Name="select" 
                     PropertyName="SelectedValue" />
