@@ -112,7 +112,18 @@
                 </asp:TemplateField>
                 <asp:BoundField DataField="address" HeaderText="地址" SortExpression="address" />
                 <asp:BoundField DataField="comment" HeaderText="備註" SortExpression="comment" />
-                <asp:CommandField ShowInsertButton="True" CancelText="取消" InsertText="新增" />
+                <asp:TemplateField ShowHeader="False">
+                    <InsertItemTemplate>
+                        <asp:Button ID="Button1" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="新增" />
+                        &nbsp;<asp:Button ID="Button2" runat="server" CausesValidation="False" 
+                            CommandName="Cancel" onclick="Button2_Click" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Button ID="Button1" runat="server" CausesValidation="False" 
+                            CommandName="New" Text="新增" />
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Fields>
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
