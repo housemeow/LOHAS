@@ -103,7 +103,7 @@
             
             SelectCommand="SELECT [cid], [firstConsumeDate], [name], [cellphone], [phone], [restMoney], [gender], [birthday] FROM [Customer] WHERE (month(birthday) = @nowMonth)">
             <SelectParameters>
-                <asp:Parameter Name="nowMonth" />
+                <asp:SessionParameter Name="nowMonth" SessionField="nowMonth" />
             </SelectParameters>
         </asp:SqlDataSource>
         </span>
