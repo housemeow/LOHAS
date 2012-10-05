@@ -11,10 +11,12 @@ public partial class _10_Security_office_customer_customerCreate : System.Web.UI
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (!IsPostBack)
-        //{
-        birthdayControl();
-        //}
+
+        if (!IsPostBack || (Session["isCancle"] !=null && Session["isCancle"].Equals(true)))
+        {    
+            birthdayControl();
+            Session["isCancle"] = null;
+        }
     }
     private void birthdayControl()
     {
@@ -157,5 +159,10 @@ public partial class _10_Security_office_customer_customerCreate : System.Web.UI
         }else{
             healthTextBox.Text += healthDropDownList.SelectedValue;
         }
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("customerCreate.aspx");
     }
 }
